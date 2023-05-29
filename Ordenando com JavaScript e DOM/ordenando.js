@@ -1,23 +1,22 @@
-// Função para trocar os valores de duas posições em um vetor
-function swap(array, pos1, pos2) {
+// Função swap
+const swap = (array, pos1, pos2) => {
   ;[array[pos1], array[pos2]] = [array[pos2], array[pos1]]
 }
 
-// Função para embaralhar os elementos de um vetor
-function shuffle(array, swaps) {
-  const len = array.length
-  for (let i = 0; i < swaps; i++) {
-    const pos1 = Math.floor(Math.random() * len)
-    const pos2 = Math.floor(Math.random() * len)
+// Função shuffle
+const shuffle = (array, numSwaps) => {
+  for (let i = 0; i < numSwaps; i++) {
+    const pos1 = Math.floor(Math.random() * array.length)
+    const pos2 = Math.floor(Math.random() * array.length)
     swap(array, pos1, pos2)
   }
 }
 
-// Função de ordenação Bubble Sort
-function bubble_sort(array) {
-  const len = array.length
-  for (let i = 0; i < len - 1; i++) {
-    for (let j = 0; j < len - 1 - i; j++) {
+// Função bubble_sort
+const bubble_sort = (array) => {
+  const length = array.length
+  for (let i = 0; i < length - 1; i++) {
+    for (let j = 0; j < length - 1 - i; j++) {
       if (array[j] > array[j + 1]) {
         swap(array, j, j + 1)
       }
@@ -25,33 +24,31 @@ function bubble_sort(array) {
   }
 }
 
-// Função de ordenação Selection Sort
-function selection_sort(array) {
-  const len = array.length
-  for (let i = 0; i < len - 1; i++) {
+// Função selection_sort
+const selection_sort = (array) => {
+  const length = array.length
+  for (let i = 0; i < length - 1; i++) {
     let minIndex = i
-    for (let j = i + 1; j < len; j++) {
+    for (let j = i + 1; j < length; j++) {
       if (array[j] < array[minIndex]) {
         minIndex = j
       }
     }
-    if (minIndex !== i) {
-      swap(array, i, minIndex)
-    }
+    swap(array, i, minIndex)
   }
 }
 
-// Função de ordenação Quick Sort
-function quick_sort(array, start, end) {
+// Função quick_sort
+const quick_sort = (array, start, end) => {
   if (start < end) {
-    const pivotIndex = partition(array, start, end)
+    const pivotIndex = particionamento(array, start, end)
     quick_sort(array, start, pivotIndex - 1)
     quick_sort(array, pivotIndex + 1, end)
   }
 }
 
-// Função de particionamento para Quick Sort
-function partition(array, start, end) {
+// Função de apoio a quick_sort
+const particionamento = (array, start, end) => {
   const pivot = array[end]
   let i = start - 1
   for (let j = start; j < end; j++) {
