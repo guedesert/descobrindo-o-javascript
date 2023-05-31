@@ -1,0 +1,95 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+header {
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header img {
+  object-fit: cover;
+  height: 100px;
+}
+header div {
+  text-align: end;
+}
+#curso {
+  font-size: larger;
+  font-weight: bold;
+}
+#mundo {
+  font-weight: lighter;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+#disciplina {
+  text-align: center;
+}
+#disciplina::after {
+  content: "|";
+  display: inline-block;
+  animation: cursor-blink 0.7s infinite;
+}
+@keyframes cursor-blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#procedimentos {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: larger;
+  font-weight: bolder;
+}
+#procedimentos li {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: black;
+}
+#procedimentos li:hover {
+  background-color: gray;
+  color: white;
+}
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: small;
+  position: fixed;
+  bottom: 0;
+}

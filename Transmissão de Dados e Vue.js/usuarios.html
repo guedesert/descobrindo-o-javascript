@@ -12,6 +12,13 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <style>
+      footer {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+      }
+    </style>
     <!-- Vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
@@ -23,7 +30,6 @@
         >reqres.in</a
       >
     </h5>
-
     <div id="usuarios" class="container-fluid">
       <div class="row">
         <div class="col-4" v-for="(user, index) in users" :key="index">
@@ -39,7 +45,9 @@
         </div>
       </div>
     </div>
-
+    <footer>
+      <a href="../index.html" class="btn btn-light">Voltar</a>
+    </footer>
     <script>
       var app = new Vue({
         el: "#usuarios",
