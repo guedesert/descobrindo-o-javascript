@@ -85,6 +85,6 @@ Este repositório está licensiado sob a [Licença MIT](./LICENSE).
 
 <div align=center>
 
-[![Licença](https://img.shields.io/github/license/guedesert/meu-primeiro-site-cringe?style=for-the-badge&color=blue&label=licença)](./LICENSE)
+[![Licença](https://img.shields.io/github/license/guedesert/descobrindo-o-javascript?style=for-the-badge&color=blue&label=licença)](./LICENSE)
 
 </div>
